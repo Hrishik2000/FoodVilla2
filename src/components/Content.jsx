@@ -4,7 +4,7 @@ import Card from "./Card.jsx"
 import ShimmerText from "./ShimmerText.jsx";
 import { Link } from "react-router-dom";
 // filtering logic in Helper component
-import { filterData } from "../utils/helper.jsx";
+import { filterData } from "../utils/Helper.jsx";
 import useIsOnline from "../utils/useIsOnline.jsx";
 import Offline from "./Offline.jsx";
 
