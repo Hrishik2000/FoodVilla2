@@ -1,0 +1,12 @@
+{
+    // put all in  "" because babelrc require JSON inside it 
+    "presets": [
+        ["@babel/preset-env", {"targets": {"node": "current"}}],
+        ["@babel/preset-react", {"runtime": "automatic" }]
+        
+    ]
+}
+
+// there is difference between  JSON & Javascript object
+
+
