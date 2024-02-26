@@ -17,9 +17,9 @@ async function FetchMenue(){
         `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.684889949661027&lng=77.2995937988162&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
       );
       const json = await response.json();
-      console.log(json)
-      console.log(json.data)
-      console.log( json.data.cards);
+      //console.log(json)
+      //console.log(json.data)
+      //console.log( json.data.cards);
 
       setSpecificResorantMenue(json.data);
     } catch (error) {

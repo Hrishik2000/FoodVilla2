@@ -31,9 +31,9 @@ const RestorantMenue = () => {
         {/* // [2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info.name */}
 
         {/* <img src={GET_IMAGE_URL+SpecificResorantMenue?.cards[0]?.card?.info?.cloudinaryImageId} alt="img" /> */}
-        <h3>Area:{SpecificResorantMenue?.cards[0]?.card?.card?.info?.areaName}</h3>
+        <h3>Area:{SpecificResorantMenue?.cards[2]?.card?.card?.info?.areaName}</h3>
  
-        <h3>Star Ratings:{SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.ratings?.aggregatedRating?.rating}</h3>
+        <h3>Star Ratings:{SpecificResorantMenue?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.ratings?.aggregatedRating?.rating}</h3>
         <h1 className="font-bold">Menue</h1>
         <button className="bg-[#E4AE74] p-1 border border-black rounded-md " onClick={
           ()=>{
@@ -41,10 +41,10 @@ const RestorantMenue = () => {
           }
         }>click Me</button>
         <div className="flex flex-wrap">
-            {SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item)=>{
-               console.log(item.card.info);
+            {SpecificResorantMenue?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item,index)=>{
+               //console.log(item.card.info);
               return(
-                <MenueCard  info = {item.card.info}/>
+                <MenueCard  info = {item.card.info} key={index}/>
               )
                 })}
         </div>

@@ -4,7 +4,6 @@ import App from './App.jsx'
 import { ErrorPage } from './components/ErrorPage';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import AboutUs from './components/AboutUs';
-import Meals from './components/Meals';
 import Contact from './components/Contact.jsx';
 import Content from './components/Content.jsx';
 import RestorantMenue from './components/RestorantMenue.jsx';
@@ -48,7 +47,6 @@ const AppRouter = createBrowserRouter([
             }
           ] 
         },
-        { path: "/meals", element: <Meals/> },
         { path: "/contact", element: <Contact/> },
         { path: "/restorantMenue/:id", element: <RestorantMenue/> },
         //if we not handel error then only error code will generate hence commenting this

@@ -9,8 +9,8 @@ export default function ShimmerText(){
     return (
         <>
         <div className="Restorant-list flex flex-wrap   ">
-        {Array(10).fill("").map((element,index)=>{
-                 return <div className="Shimmer-Card w-56 h-[400px] bg-[#E4AE74] m-3 rounded-2xl" key = {index}></div>
+        {Array(20).fill("").map((index)=>{
+                 return <div className="Shimmer-Card w-56 h-[370px] bg-[#E4AE74] m-3 rounded-2xl" key = {index}></div>
         })}
         </div>
         

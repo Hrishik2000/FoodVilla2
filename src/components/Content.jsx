@@ -25,15 +25,17 @@ function Content() {
 
   async function FetchData(){
     try{
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.684889949661027&lng=77.2995937988162&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data = await fetch("https://swiggy.com/dapi/restaurants/list/v5?lat=28.684889949661027&lng=77.2995937988162&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       if(!data.ok){
         throw new Error( `Failed to Fetch data: ${data.status}`)
       }
+      //console.log(data)
       const json = await data.json();
       //console.log(json);
 
        // optional chaining
       setAllRestorents(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      //console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       setFilteredRestorents(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       //console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
@@ -61,14 +63,14 @@ function Content() {
     <>
     
     <div className="Search-fn text-center m-3  ">
-    <input className=" focus:bg-slate-300 border-2 rounded-md p-2 m-1 border-[#E4AE74]" type="text" placeholder="search"
+    <input className=" focus:bg-slate-300 border-2 rounded-md p-2 m-1 border-[#E4AE74] w-96" type="text" placeholder="search  favourite restorant"
     value={SearchData} onChange={(e)=>
       {
         setSearchData(e.target.value);
         
       }}/>
 
-    <button  className= "bg-[#0A0C0B] text-[#E4AE74] rounded-md m-1 p-2 hover:bg-[#E4AE74] hover:text-[#0A0C0B]  " onClick={()=>{
+    <button  className= "bg-[#0A0C0B] text-[#E4AE74] rounded-md m-1 p-2 hover:bg-[#E4AE74] transition duration-200 ease-in-out hover:text-[#0A0C0B]  " onClick={()=>{
          const data = filterData(SearchData,AllRestorants);
         //  console.log(RestorantsList)
         //  console.log(data)

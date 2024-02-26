@@ -4,8 +4,10 @@ import { addItem } from "../utils/cartSlice";
 
 
 export default function MenueCard(info) {
-   //{console.log(info.info)};
-    const {imageId,name, defaultPrice,price} = info.info
+   {console.log(info.info)};
+    const {imageId,name, defaultPrice,price
+      } = info.info
+      console.log(Math.floor(price / 100))
     //when we click on button it dispatches an action which calls reducer function & slice of store gets updated
    const dispatch =  useDispatch();
  const AddItemToCart = ()=>{
@@ -21,13 +23,7 @@ export default function MenueCard(info) {
         
         <h2 className="font-bold">{name}</h2>
         <div className="flex justify-between">
-          <h3>
-            {" "}
-            Price:
-            {info.defaultPrice
-              ? Math.floor(defaultPrice / 100)
-              : Math.floor(price / 100)}
-          </h3>
+          <h3>Price:{defaultPrice? Math.floor(defaultPrice / 100) : Math.floor(price / 100)}</h3>
 
           
         </div>
