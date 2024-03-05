@@ -5,7 +5,7 @@ const Section = ({name,data})=>{
     // hence auto collapsable accordian cant be made like this(one user open one accordion then another accordiaon will close automaticaly)
     const [isActive , setIsActive] =useState(false);
     return(<>
-        <div className="border border-black">
+        <div className="border-4 border-[#E4AE74] rounded-lg m-2 p-2">
             <h1>{name}</h1>
             {/* toggel between show or hide button */}
             { isActive ? <button onClick={()=>{setIsActive(false)}} className="bg-black text-white p-1 rounded-md  border border-black">hide</button> :
@@ -21,10 +21,10 @@ const Section = ({name,data})=>{
 const Section2 = ({name,data, isVisible, setIsActive})=>{
    
     return(<>
-        <div className="border border-black">
+        <div className="border-4 border-[#E4AE74] rounded-lg m-2 p-2 ">
             <h1>{name}</h1>
             {/* toggel between show or hide button */}
-            { isVisible ? <button onClick={()=>{setIsActive(false)}} className="bg-black text-white p-1 rounded-md  border border-black">hide</button> :
+            { isVisible ? <button onClick={()=>{setIsActive(false)}} className="bg-black text-white p-1 rounded-md  border border-black ">hide</button> :
                         <button onClick={()=>{setIsActive(true)}} className="bg-black text-white p-1 rounded-md border border-black">show</button>}
             {/* p tag will only be rendered when isActive is true */}
 
@@ -83,3 +83,6 @@ const InstaMart = ()=>{
 }
 
 export default InstaMart;
+
+
+

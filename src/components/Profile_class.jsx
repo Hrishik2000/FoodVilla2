@@ -53,7 +53,7 @@ class Profile_class extends React.Component {
         console.log("child_1_render_called "+ this.props.name);
 
         return(
-            <div className="classComponent item-center" > 
+            <div className="classComponent item-center   " > 
                             <h1>Profile_Class_component</h1>
                             {/* use this.props to get any props in class component */}
                             <h2>{this.props.name}</h2>
@@ -79,7 +79,7 @@ class Profile_class extends React.Component {
                                         count2: this.state.count2 + 1
                                     });
                                 }
-                                } className="bg-[#0A0C0B] text-[#E4AE74] p-2 rounded-md">click</button>
+                                } className="bg-[#0A0C0B] text-[#E4AE74] p-2 rounded-md m-2">click</button>
             </div>
 
         )

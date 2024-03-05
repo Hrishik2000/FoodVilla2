@@ -22,8 +22,9 @@ const RestorantMenue = () => {
 
   return (!SpecificResorantMenue) ? <ShimmerText/> :(
     <div className="items-center ">
-      <div className="Rest-page items-center ">
-        <div >{`RestorantMenue id: ${id}`}</div>
+      <div className="Rest-page items-center  ">
+        {/* <div className="">{`RestorantMenue id: ${id}`}</div> */}
+
         {/* <p className="font-bold">{SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.name}</p> */}
 
         {/* [2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info */}
@@ -31,17 +32,19 @@ const RestorantMenue = () => {
         {/* // [2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info.name */}
 
         {/* <img src={GET_IMAGE_URL+SpecificResorantMenue?.cards[0]?.card?.info?.cloudinaryImageId} alt="img" /> */}
-        <h3>Area:{SpecificResorantMenue?.cards[2]?.card?.card?.info?.areaName}</h3>
+
+
+        {/* <h3>Area:{SpecificResorantMenue?.cards[0]?.card?.card?.info?.areaName}</h3> */}
  
-        <h3>Star Ratings:{SpecificResorantMenue?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.ratings?.aggregatedRating?.rating}</h3>
-        <h1 className="font-bold">Menue</h1>
-        <button className="bg-[#E4AE74] p-1 border border-black rounded-md " onClick={
+        {/* <h3>Star Ratings:{SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.ratings?.aggregatedRating?.rating}</h3> */}
+        <h1 className="font-bold text-center text-3xl underline underline-offset-2">Menue</h1>
+        {/* <button className="bg-[#E4AE74] p-1 border border-black rounded-md " onClick={
           ()=>{
             updateCart();
           }
-        }>click Me</button>
+        }>click Me</button> */}
         <div className="flex flex-wrap">
-            {SpecificResorantMenue?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item,index)=>{
+            {SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item,index)=>{
                //console.log(item.card.info);
               return(
                 <MenueCard  info = {item.card.info} key={index}/>

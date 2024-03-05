@@ -23,7 +23,7 @@ class Profile_class extends React.Component {
         console.log("child_2_render_called "+ this.props.name);
 
         return(
-            <div className="classComponent"> 
+            <div className="classComponent "> 
                             <h1>Profile_Class_component</h1>
                             {/* use this.props to get any props in class component */}
                             <h2>{this.props.name}</h2>

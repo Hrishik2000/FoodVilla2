@@ -16,10 +16,7 @@ const cartSlice = createSlice({
     reducers:{
         addItem: (state,action)=>{state.items.push(action.payload);},
         removeItem: (state, action) => {
-          console.log(action)
-          console.log(action.payload)
-          console.log(state)
-          console.log(state.items)
+          state.items.pop();
           },
         emptyCart: (state)=>{state.items = []},
     }
