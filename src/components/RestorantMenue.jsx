@@ -37,7 +37,7 @@ const RestorantMenue = () => {
         {/* <h3>Area:{SpecificResorantMenue?.cards[0]?.card?.card?.info?.areaName}</h3> */}
  
         {/* <h3>Star Ratings:{SpecificResorantMenue?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.ratings?.aggregatedRating?.rating}</h3> */}
-        <h1 className="font-bold text-center text-3xl underline underline-offset-2">Menue</h1>
+        <h1 className="font-bold text-center text-3xl underline underline-offset-2">Menu</h1>
         {/* <button className="bg-[#E4AE74] p-1 border border-black rounded-md " onClick={
           ()=>{
             updateCart();
